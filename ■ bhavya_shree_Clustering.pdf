@@ -1,0 +1,33 @@
+# Customer Segmentation Clustering Report
+# Objective:
+   The goal of this analysis is to perform customer segmentation using clustering techniques based on both profile and transaction data.
+  The insights will allow for grouping customers into meaningful segments based on their behavior and characteristics.
+# Methodology:
+  1. Data Preprocessing: 
+     * Two datasets (Customers.csv and Transactions.csv) were merged on CustomerID.
+     * Transaction features such as Total Spend, Transaction Count, and Recency (days since last transaction) were computed.
+  2. Feature Scaling:
+     * The features were standardized using StandardScaler to ensure proper scaling for clustering algorithms.
+  3. Clustering Algorithm:
+     * K-Means Clustering was used for segmenting customers.
+     * The optimal number of clusters was determined using the Elbow Method.
+  4. Evaluation Metrics:
+     *  Davies-Bouldin Index (DBI): A measure of cluster compactness and separation.
+     * Silhouette Score: A metric assessing how similar objects are within a cluster compared to other clusters.
+  5. Visualization:
+     * Elbow Curve: To identify the optimal number of clusters.
+     * Cluster Scatter Plot: To visualize clusters in feature space.
+# Results
+   1. Optimal Number of Clusters:
+     * Based on the Elbow Method (see below), the optimal number of clusters was determined to be 4.
+   2. Cluster Metrics:
+     * Davies-Bouldin Index: 0.72 (Lower values indicate better clustering.)
+     * Silhouette Score: 0.63 (Higher values indicate better-defined clusters.)
+   3. Cluster Characteristics:
+     *  Customers were segmented into 4 clusters based on their Total Spend and Transaction Count.
+     * The scatter plot below highlights the clustering results:
+# Key Observations:
+     * Cluster 0 (Purple): Represents high-frequency but moderate-spending customers.
+     * Cluster 1 (Blue): Represents high-spending and frequent customers.
+     * Cluster 2 (Teal): Represents low-spending and less frequent customers.
+     *  Cluster 3 (Yellow): Represents moderate-spending and frequent customers.
